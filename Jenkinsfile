@@ -8,7 +8,7 @@ pipeline
 
     
     stages {
-        stage("Build") {
+        stage("Создание и обновление тестовой базы") {
             steps {
                 echo "Start"
                 echo "Doing something"
@@ -17,7 +17,7 @@ pipeline
 
             
         }
-        stage("Smoke_Testing") {
+        stage("Применение обновления") {
             steps {
                 echo "Start"
                 echo "Testing"
@@ -26,7 +26,7 @@ pipeline
 
             
         }
-        stage("UI_Testing") {
+        stage("Загрузка первоначальных настроек") {
             steps {
                 echo "Start"
                 echo "Testing"
@@ -35,7 +35,34 @@ pipeline
 
             
         }
-         stage("Deploying") {
+         stage("Сценарные тесты") {
+            steps {
+                echo "Start"
+                echo "Deploy"
+                echo "End"
+            }
+
+            
+        }
+               stage("Дымовые тесты") {
+            steps {
+                echo "Start"
+                echo "Testing"
+                echo "End"
+            }
+
+            
+        }
+         stage("API тесты") {
+            steps {
+                echo "Start"
+                echo "Deploy"
+                echo "End"
+            }
+
+            
+        }
+        stage("Выгрузка отчетов") {
             steps {
                 echo "Start"
                 echo "Deploy"
