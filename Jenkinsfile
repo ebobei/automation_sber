@@ -4,11 +4,7 @@ pipeline
         label 'OneS'
     }
 
-    enviroment {
-        envString = 'true'
-    }
 
-    post {
 
     }
     stages {
