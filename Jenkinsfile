@@ -9,17 +9,7 @@ pipeline
     }
 
     post {
-        always {
-            bat "echo always"
-        }
 
-        failrue {
-            bat "echo failrue"
-        }
-
-        success {
-            bat "echo success"
-        }
     }
     stages {
         stage("stage") {
@@ -33,6 +23,6 @@ pipeline
             }
         }
     }
-    
+
 }
 
